@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+h1 {
+  font-family: 'Kanit';
+  font-size: 60px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+p {
+  font-family: 'Kanit';
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+h2 {
+  font-family: 'Kanit';
+  font-size: 55px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+}
+h3 {
+  font-family: 'Kanit';
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+}
+h4 {
+  font-family: 'Kanit';
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+}
+h5 {
+  font-family: 'Kanit';
+  font-size: 15px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+}
+
+h6 {
+  font-family: 'Kanit';
+  font-size: 50px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+}
+
+
+
+
+
