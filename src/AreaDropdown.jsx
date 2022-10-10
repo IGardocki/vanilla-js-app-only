@@ -28,11 +28,16 @@ color: white;
 `
 
 const SubmenuStyle = styled.div`
+//ian stuff
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
 border-radius: 10px;
 border: none;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 cursor: pointer;
-font-size: 16px
+font-size: 1em;
 font-weight: 700;
 padding: 15px 60px;
 background-color: white;
@@ -70,7 +75,7 @@ const Nav = styled.nav`
   color: white;
   `
 
-  const Flex = styled.div`
+const Flex = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -85,40 +90,40 @@ color: black;
 
 
 export const AreaDropdown = () => {
-    const [areaSubMenu, setAreaSubMenu] = useState([]);
-    const [display, setDisplay] = useState('none');
+  const [areaSubMenu, setAreaSubMenu] = useState([]);
+  const [display, setDisplay] = useState('none');
 
-    useEffect(() => {
-        fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list")
-        .then(res => res.json())
-        .then(data => setAreaSubMenu(data.meals.map((meal) => meal.strArea)))
-    }, [])
-    const AreaMenuItems =
-    {
-      title: 'Area',
-      url: 'a',
-      subMenu: areaSubMenu
+  useEffect(() => {
+    fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list")
+      .then(res => res.json())
+      .then(data => setAreaSubMenu(data.meals.map((meal) => meal.strArea)))
+  }, [])
+  const AreaMenuItems =
+  {
+    title: 'Area',
+    url: 'a',
+    subMenu: areaSubMenu
+  }
+
+  function handleClick() {
+    if (display == 'none') {
+      setDisplay('block')
+    } else {
+      setDisplay('none')
     }
+  }
 
-    function handleClick() {
-        if (display == 'none') {
-            setDisplay('block')
-        } else {
-            setDisplay('none')
-        }
-    }
+  return (
 
-    return (
-        
-            <Flex onClick={handleClick}>
-            <h3 style={{ color: 'black' }}>Area</h3>
-            <Container style={{ display: display }}>
-                <SubmenuStyle>
-                    <Submenu sub={AreaMenuItems} />
-                </SubmenuStyle>
-            </Container>
-        </Flex>
-    )
+    <Flex onClick={handleClick}>
+      <h3 style={{ color: 'black' }}>Area</h3>
+      <Container style={{ display: display }}>
+        <SubmenuStyle>
+          <Submenu sub={AreaMenuItems} />
+        </SubmenuStyle>
+      </Container>
+    </Flex>
+  )
 
 }
 

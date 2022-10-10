@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from 'react
 import styled from "styled-components";
 import { SearchResults } from "./SearchResults";
 import { ErrorLanding } from "./ErrorLanding";
-import { Dropdown } from "./Dropdown"
+
 
 const Container = styled.div`
   width: 1000px;
@@ -54,12 +54,12 @@ export const Submenu = ({ sub }) => {
             
             {sub.subMenu.map(item => {
                 return (
-                    <Flex style={{width: '11%'}} onClick={() => { 
+                    <Flex onClick={() => { 
                         handleClick(item);
                         // navigate(`/searchResults/${item}`)
                         
                         navigate(`/searchResults/${sub.url}=${item}`)
-                    }}><h3 style={{fontSize:'15px', color:'black'}}>{item}</h3></Flex>
+                    }}><h3 style={{fontSize:'1em', color:'black'}}>{item}</h3></Flex>
                 )
             })}
             

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { MealContext } from './MealContext';
 import { Header } from './Header'
 import { RandomMeal } from './RandomMeal';
+// import { Container } from 'react-bootstrap';
 
 const Container = styled.header`
   display: flex;
@@ -16,7 +17,6 @@ const Container = styled.header`
 background-image: url("https://i.pinimg.com/originals/22/a5/a7/22a5a7b9dbc0e29ccef006dea5981367.png");
 background-size: cover;
 border: solid black 10px;
-
   `
   const StyledCard = styled.div`
   display: flex;
